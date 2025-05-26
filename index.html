@@ -12,14 +12,28 @@
       background: #f9f9f9;
       color: #111;
     }
-    .container {
-      max-width: 700px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      background: #fff;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-      border-radius: 10px;
+    html, body {
+          height: 100%;
+          margin: 0;
+        }
+        
+        body {
+          display: flex;
+          justify-content: center;  /* horizontal center */
+          align-items: center;      /* vertical center */
+        }
+        
+        .container {
+          max-width: 700px;
+          width: 100%;        /* so it shrinks on narrow viewports */
+          margin: 2rem;
+          padding: 1.5rem;
+          background: #fff;
+          text-align: center;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+          border-radius: 10px;
+        }
+
       position: absolute;
       top: 45%; left: 50%;
       transform: translate(-50%, -50%);
