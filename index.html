@@ -5,11 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yousif Shwetar</title>
   <style>
-    /* make sure body fills the screen and has a neutral bg */
-    html, body {
-      height: 100%;
-      margin: 0;
-    }
+    /* ——— layout ——— */
+    html, body { height: 100%; margin: 0; }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: #f9f9f9;
@@ -18,71 +15,40 @@
       justify-content: center;
       align-items: center;
     }
-
     .container {
       max-width: 700px;
       width: 100%;
       margin: 2rem;
-      padding: 1.5rem;               /* uniform padding on all sides */
+      padding: 1.5rem;
       background: #fff;
       text-align: center;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
       border-radius: 10px;
     }
 
+    /* ——— content ——— */
     .profile-img {
       width: 280px;
       height: 280px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 2rem auto 1rem;       /* a little less bottom margin */
+      margin: 2rem auto 1rem;
       display: block;
     }
+    h1 { font-size: 2rem; margin: 0.5rem 0 1rem; }
+    p  { font-size: 1rem; line-height: 1.7; margin: 0 auto 1.5rem; max-width: 640px; text-align: justify; }
 
-    h1 {
-      font-size: 2rem;
-      margin: 0.5rem 0 1rem;
-    }
+    a         { color: #3a78c9; text-decoration: none; }
+    a:hover   { color: #2b5ea3; }
 
-    p {
-      font-size: 1rem;
-      line-height: 1.7;
-      margin: 0 auto 1.5rem;
-      max-width: 640px;
-      text-align: justify;
-    }
-
-    a {
-      color: #3a78c9;
-    }
-    a:hover {
-      color: #2b5ea3;
-    }
-
-    /* —— Social icons wrapper —— */
+    /* ——— social icons ——— */
     .social-links {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      padding: 1rem 0;               /* extra vertical padding */
-      /* margin-bottom: 2rem; */     /* no longer needed */
-    }
-    .social-links a {
-      background: none;
-      padding: 0;
-    }
-    .social-links img {
-      width: 32px;
-      height: 32px;
-      display: block;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
       padding: 1rem 0;
-      color: #777;
     }
+    .social-links img { width: 32px; height: 32px; display: block; }
   </style>
 </head>
 <body>
@@ -93,10 +59,15 @@
       class="profile-img"
       onerror="this.onerror=null;this.src='Picture.jpeg';"
     />
+
     <h1>Hi, I'm Yousif.</h1>
+
     <p>
-      I'm an MD-PhD student in the Medical Scientist Training Program at the University of North Carolina at Chapel Hill 🐏.
-      I am jointly appointed in the
+      I'm an MD-PhD student in the
+      <a href="https://www.med.unc.edu/mdphd/" target="_blank">
+        Medical Scientist Training Program
+      </a>
+      at the University of North Carolina at Chapel Hill 🐏. I am jointly appointed in the
       <a href="https://bme.unc.edu/" target="_blank">
         UNC-NCSU Lampe Joint Department of Biomedical Engineering
       </a>
@@ -106,45 +77,33 @@
       </a>.
       My research centers on applying advanced signal processing and machine learning techniques to ophthalmic diagnostics.
       I have developed and published methods using electroretinography to identify early and longitudinal markers of retinal dysfunction.
-      I have also worked as a biocurator for the
+      I also contribute to the
+      <a href="https://www.clinicalgenome.org/working-groups/clinical-domain/ocular-cdwg/" target="_blank">
+        Ocular Clinical Domain Working Group
+      </a>
+      within the Clinical Genome Resource (ClinGen), helping to refine gene–disease validity curation for ophthalmic disorders.
+      Previously, I worked as a biocurator for the
       <a href="https://mondo.monarchinitiative.org/" target="_blank">
         Mondo Disease Ontology
       </a>,
-      where I broadly curate new disease term requests and rectify mappings of inherited retinal dystrophies with international experts.
-      My long-term goal is to integrate artificial intelligence pipelines that bridge genotype-driven insights with quantitative clinical imaging
-      and physiological data to enable precision phenotyping. Outside of research, I enjoy strength training, experimenting with new recipes,
-      and working on motorcycles.
+      rectifying mappings of inherited retinal dystrophies with international experts.
+      My long-term goal is to integrate artificial-intelligence pipelines that bridge genotype-driven insights with quantitative clinical imaging and physiological data to enable precision phenotyping. Outside of research, I enjoy strength training, experimenting with new recipes, and working on motorcycles.
     </p>
 
     <div class="social-links">
-      <!-- Twitter -->
-      <a href="https://x.com/yousifshwetar" aria-label="Twitter" title="Twitter">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/32px-Logo_of_Twitter.svg.png"
-          alt="Twitter"
-        />
+      <!-- Twitter/X -->
+      <a href="https://x.com/yousifshwetar" aria-label="Twitter">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/32px-Logo_of_Twitter.svg.png" alt="Twitter" />
       </a>
       <!-- Google Scholar -->
-      <a href="https://scholar.google.com/citations?user=Io2K8HoAAAAJ&hl=en"
-         aria-label="Google Scholar" title="Google Scholar">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
-          alt="Google Scholar"
-        />
+      <a href="https://scholar.google.com/citations?user=Io2K8HoAAAAJ&hl=en" aria-label="Google Scholar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" />
       </a>
       <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/yousif-shwetar/"
-         aria-label="LinkedIn" title="LinkedIn">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
-          alt="LinkedIn"
-        />
+      <a href="https://www.linkedin.com/in/yousif-shwetar/" aria-label="LinkedIn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" />
       </a>
     </div>
   </main>
-
-  <footer>
-    &copy; 2025 Yousif Shwetar
-  </footer>
 </body>
 </html>
