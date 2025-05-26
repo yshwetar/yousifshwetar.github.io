@@ -12,14 +12,6 @@
       background: #f9f9f9;
       color: #111;
     }
-    header {
-      background: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
     .container {
       max-width: 700px;
       margin: 2rem auto;
@@ -28,10 +20,13 @@
       text-align: center;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
       border-radius: 10px;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
     }
     .profile-img {
-      width: 220px;
-      height: 220px;
+      width: 280px;
+      height: 280px;
       border-radius: 50%;
       object-fit: cover;
       margin: 2rem auto;
@@ -54,26 +49,29 @@
     a:hover {
       color: #2b5ea3;
     }
+
+    /* —— Social icons wrapper —— */
     .social-links {
       display: flex;
       justify-content: center;
       gap: 1rem;
-      flex-wrap: wrap;
       margin-bottom: 2rem;
     }
+    /* remove any background, padding, etc. */
     .social-links a {
-      display: inline-block;
-      background-color: #007acc;
-      color: white;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: background-color 0.3s ease;
+      background: none;
+      padding: 0;
     }
     .social-links a:hover {
-      background-color: #005f99;
+      background: none;
     }
+    /* force the images to their natural size */
+    .social-links img {
+      width: 32px;
+      height: 32px;
+      display: block;
+    }
+
     .sub-links {
       margin-top: 2rem;
     }
@@ -93,10 +91,11 @@
   </style>
 </head>
 <body>
-  
-
-  <main class="container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%)">
-    <img src="images/Picture.jpeg" alt="Yousif Shwetar" class="profile-img" style="width: 280px; height: 280px" onerror="this.onerror=null;this.src='Picture.jpeg';" />
+  <main class="container">
+    <img src="images/Picture.jpeg"
+         alt="Yousif Shwetar"
+         class="profile-img"
+         onerror="this.onerror=null;this.src='Picture.jpeg';" />
 
     <h1>Hi, I'm Yousif.</h1>
     <p>
@@ -104,16 +103,24 @@
     </p>
 
     <div class="social-links">
-  <a href="https://x.com/yousifshwetar?lang=bg" aria-label="Twitter" title="Twitter">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Twitter" width="32" height="32" style="background: none; box-shadow: none; border: none;" />
-  </a>
-  <a href="https://scholar.google.com/citations?user=Io2K8HoAAAAJ&hl=en" aria-label="Google Scholar" title="Google Scholar">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar" width="32" height="32" style="background: none; box-shadow: none; border: none;" />
-  </a>
-  <a href="https://www.linkedin.com/in/yousif-shwetar/" aria-label="LinkedIn" title="LinkedIn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn" width="32" height="32" style="background: none; box-shadow: none; border: none;" />
-  </a>
-</div>
+      <!-- Twitter bird only -->
+      <a href="https://x.com/yousifshwetar" aria-label="Twitter" title="Twitter">
+        <img src="https://upload.wikimedia.org/wikipedia/fr/c/c8/Twitter_Bird.svg"
+             alt="Twitter" />
+      </a>
+      <!-- Google Scholar -->
+      <a href="https://scholar.google.com/citations?user=Io2K8HoAAAAJ&hl=en"
+         aria-label="Google Scholar" title="Google Scholar">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg"
+             alt="Google Scholar" />
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/yousif-shwetar/"
+         aria-label="LinkedIn" title="LinkedIn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
+             alt="LinkedIn" />
+      </a>
+    </div>
 
     <div class="sub-links">
       <a href="research.html">About My Research</a>
