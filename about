@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me | Yousif Shwetar</title>
+  <style>
+    /* —— layout —— */
+    html,body{height:100%;margin:0;}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:#f9f9f9;color:#111;
+      display:flex;justify-content:center;align-items:flex-start;
+    }
+    .container{
+      max-width:700px;width:100%;margin:3rem 2rem;padding:1.5rem;
+      background:#fff;border-radius:10px;
+      box-shadow:0 0 10px rgba(0,0,0,.05);text-align:center;
+    }
 
+    /* —— navigation —— */
+    nav{display:flex;justify-content:center;gap:2rem;margin-bottom:1.5rem;}
+    nav a{
+      color:#444;text-decoration:none;font-weight:500;
+      padding-bottom:.2rem;transition:color .2s;
+    }
+    nav a:hover{color:#2b5ea3;}
+    nav a.active{
+      color:#3a78c9;border-bottom:2px solid #3a78c9;
+    }
+
+    /* —— content —— */
+    .profile-img{
+      width:280px;height:280px;border-radius:50%;object-fit:cover;
+      margin:2rem auto 1rem;
+    }
+    h1{font-size:2rem;margin:.5rem 0 1rem;}
+    p{font-size:1rem;line-height:1.7;margin:0 auto 1.5rem;max-width:640px;text-align:justify;}
+
+    /* —— links & icons —— */
+    a{color:#3a78c9;}
+    a:hover{color:#2b5ea3;}
+    .social-links{display:flex;justify-content:center;gap:1rem;padding:1rem 0;}
+    .social-links img{width:32px;height:32px;display:block;}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <!-- nav bar -->
+    <nav>
+      <a href="about.html" class="active">About Me</a>
+      <a href="research.html">Research</a>
+      <a href="cv.html">CV</a>
+    </nav>
+
+    <img src="images/Picture.jpeg" alt="Yousif Shwetar" class="profile-img"
+         onerror="this.onerror=null;this.src='Picture.jpeg';"/>
+
+    <h1>Hi, I'm Yousif.</h1>
+
+    <p>
+      I'm an MD-PhD student in the
+      <a href="https://www.med.unc.edu/mdphd/" target="_blank">Medical Scientist Training Program</a>
+      at the University of North Carolina at Chapel Hill 🐏. I am jointly appointed in the
+      <a href="https://bme.unc.edu/" target="_blank">UNC-NCSU Lampe Joint Department of Biomedical Engineering</a>
+      and a member of the
+      <a href="https://tislab.org/" target="_blank">Translational Integrative Sciences Lab (TISLab)</a>.
+      My research centers on applying advanced signal processing and machine learning techniques to ophthalmic diagnostics.
+      I have developed and published methods using electroretinography to identify early and longitudinal markers of retinal dysfunction.
+      I also contribute to the
+      <a href="https://www.clinicalgenome.org/working-groups/clinical-domain/ocular-cdwg/" target="_blank">Ocular Clinical Domain Working Group</a>
+      within the Clinical Genome Resource (ClinGen), helping to refine gene–disease validity curation for ophthalmic disorders.
+      Concurrently, I work as a biocurator for the
+      <a href="https://mondo.monarchinitiative.org/" target="_blank">Mondo Disease Ontology</a>,
+      rectifying mappings of inherited retinal dystrophies with international experts.
+      My long-term goal is to integrate AI pipelines that bridge genotype-driven insights with quantitative clinical imaging and physiological data to enable precision phenotyping. Outside of research, I enjoy strength training, experimenting with new recipes, and riding motorcycles.
+    </p>
+
+    <div class="social-links">
+      <a href="https://x.com/yousifshwetar" aria-label="Twitter"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/32px-Logo_of_Twitter.svg.png" alt="Twitter"></a>
+      <a href="https://scholar.google.com/citations?user=Io2K8HoAAAAJ&hl=en" aria-label="Google Scholar"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar"></a>
+      <a href="https://www.linkedin.com/in/yousif-shwetar/" aria-label="LinkedIn"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+    </div>
+  </main>
+</body>
+</html>
