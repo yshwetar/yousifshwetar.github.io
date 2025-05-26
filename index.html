@@ -1,12 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yousif Shwetar</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yousif Shwetar</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 1.5rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    p, ul {
+      text-align: center;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 2rem 0;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello, I'm Yousif 👋</h1>
-    <p>This is my personal website hosted with GitHub Pages.</p>
+
+  <header>
+    <strong>Yousif Shwetar</strong>
+    <nav>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <img src="https://via.placeholder.com/160" alt="Yousif Shwetar" class="profile-img" />
+
+    <h1>Hello, I’m Yousif Shwetar</h1>
+    <p>
+      I’m an MD–PhD student in Biomedical Engineering at UNC Chapel Hill. My research focuses on artificial intelligence in ophthalmology, visual diagnostics, and wearable health technologies.
+    </p>
+
+    <section id="research">
+      <h2>Research</h2>
+      <ul>
+        <li>Machine learning for retinal disease</li>
+        <li>Wearable health data analysis</li>
+        <li>Signal processing for ERG</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <p><em>Fourier Analysis of PERG in Inherited Retinal Diseases</em><br>Y. Shwetar, et al., (2024)</p>
+      <p><em>Ontology Integration for Genetic Retinal Disorders</em><br>Y. Shwetar, et al., (2023)</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: yousif.shwetar@unc.edu</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Yousif Shwetar — Last updated May 2025
+  </footer>
+
 </body>
 </html>
