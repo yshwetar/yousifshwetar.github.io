@@ -2,118 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yousif Shwetar</title>
   <style>
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background: #fff;
+      background-color: #fff;
       color: #111;
-      line-height: 1.6;
     }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 2rem 3rem;
-      border-bottom: 1px solid #ccc;
+    header, footer {
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 1.5rem;
     }
-
     nav a {
-      margin-left: 1.5rem;
+      margin: 0 1rem;
       text-decoration: none;
-      color: black;
-      font-weight: 500;
+      color: #007acc;
+      font-weight: bold;
     }
-
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
+      text-align: center;
     }
-
     .profile-img {
-      width: 160px;
-      height: 160px;
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .social-links a {
+      margin: 0 0.75rem;
+      font-size: 1.25rem;
+      color: #333;
+    }
+    .sub-links a {
       display: block;
-      margin: 0 auto 1.5rem;
-    }
-
-    h1, h2 {
-      text-align: center;
-      margin-top: 0.5rem;
-    }
-
-    p, ul {
-      text-align: center;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li::before {
-      content: "• ";
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      padding: 2rem 0;
-      color: #777;
+      margin: 1rem 0;
+      font-size: 1.1rem;
+      color: #444;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <strong>Yousif Shwetar</strong>
-    <nav>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>Welcome to My Website</h1>
   </header>
 
   <main class="container">
-    <img src="https://via.placeholder.com/160" alt="Yousif Shwetar" class="profile-img" />
+    <img src="images/me.jpg" alt="Yousif Shwetar" class="profile-img" />
 
-    <h1>Hello, I’m Yousif Shwetar</h1>
-    <p>
-      I’m an MD–PhD student in Biomedical Engineering at UNC Chapel Hill. My research focuses on artificial intelligence in ophthalmology, visual diagnostics, and wearable health technologies.
-    </p>
+    <p>Hello! I'm Yousif Shwetar, an MD-PhD student in Biomedical Engineering. My work focuses on artificial intelligence in ophthalmology, wearable data analysis, and signal processing in electroretinography.</p>
 
-    <section id="research">
-      <h2>Research</h2>
-      <ul>
-        <li>Machine learning for retinal disease</li>
-        <li>Wearable health data analysis</li>
-        <li>Signal processing for ERG</li>
-      </ul>
-    </section>
+    <div class="social-links">
+      <a href="https://twitter.com/YOUR_HANDLE">Twitter</a>
+      <a href="https://scholar.google.com/citations?user=YOUR_ID">Google Scholar</a>
+      <a href="https://linkedin.com/in/YOUR_HANDLE">LinkedIn</a>
+    </div>
 
-    <section id="publications">
-      <h2>Publications</h2>
-      <p><em>Fourier Analysis of PERG in Inherited Retinal Diseases</em><br>Y. Shwetar, et al., (2024)</p>
-      <p><em>Ontology Integration for Genetic Retinal Disorders</em><br>Y. Shwetar, et al., (2023)</p>
-    </section>
+    <hr />
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: yousif.shwetar@unc.edu</p>
-    </section>
+    <div class="sub-links">
+      <a href="research.html">About My Research</a>
+      <a href="works.html">Research Work</a>
+      <a href="cv.html">Curriculum Vitae</a>
+      <a href="personal.html">Personal Page</a>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 Yousif Shwetar — Last updated May 2025
+    <p>&copy; 2025 Yousif Shwetar</p>
   </footer>
-
 </body>
 </html>
