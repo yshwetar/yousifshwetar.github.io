@@ -4,11 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Yousif Shwetar</title>
-  <!-- copy-paste the same <style> block from about.html -->
-  <style>/* (exact same CSS as above) */</style>
+
+  <!-- ———  GLOBAL STYLES  ——— -->
+  <style>
+    /* —— layout —— */
+    html,body{height:100%;margin:0;}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:#f9f9f9;color:#111;
+      display:flex;justify-content:center;align-items:flex-start;
+    }
+    .container{
+      max-width:900px;width:100%;margin:3rem 2rem;padding:2rem 2.5rem;
+      background:#fff;border-radius:10px;
+      box-shadow:0 0 12px rgba(0,0,0,.06);text-align:center;
+    }
+
+    /* —— navigation —— */
+    nav{display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;}
+    nav a{
+      color:#444;text-decoration:none;font-weight:500;
+      padding-bottom:.25rem;transition:color .2s;
+    }
+    nav a:hover{color:#2b5ea3;}
+    nav a.active{color:#3a78c9;border-bottom:2px solid #3a78c9;}
+
+    /* —— headings & text —— */
+    h1{font-size:2.1rem;margin:0 0 1.5rem;}
+    h2{font-size:1.25rem;margin:2.5rem 0 1rem;text-align:left;}
+    p,li{font-size:1rem;line-height:1.7;text-align:justify;}
+
+    /* —— publication cards —— */
+    .pub-list{display:flex;flex-direction:column;gap:1.5rem;}
+    .pub-card{
+      text-align:left;padding:1.25rem 1.5rem;border:1px solid #e0e0e0;
+      border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.03);
+      transition:transform .15s ease, box-shadow .15s ease;
+    }
+    .pub-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 4px 8px rgba(0,0,0,.08);
+    }
+    .pub-title{font-weight:600;margin:0 0 .25rem;}
+    .pub-meta{font-size:.9rem;color:#666;margin-bottom:.5rem;}
+    .tag{display:inline-block;font-size:.75rem;font-weight:600;
+         background:#eef2ff;color:#3a60c7;padding:.15rem .55rem;
+         border-radius:4px;margin-right:.4rem;}
+    a{color:#3a78c9;text-decoration:none;}
+    a:hover{color:#2b5ea3;text-decoration:underline;}
+  </style>
 </head>
+
 <body>
   <main class="container">
+    <!-- nav bar -->
     <nav>
       <a href="about.html">About Me</a>
       <a href="research.html" class="active">Research</a>
@@ -17,18 +66,70 @@
 
     <h1>Research Highlights</h1>
 
-    <p>
-      <!-- Replace this placeholder text with real content -->
-      Here you can describe your current projects, list selected publications,
-      embed figure thumbnails, or even link to preprints.  
-      For a quick start, consider:
-      <ul style="text-align:left;max-width:640px;margin:1rem auto 1.5rem;">
-        <li><strong>Electroretinography + Wavelets:</strong> Developing frequency-domain markers for Stargardt phenotype stratification.</li>
-        <li><strong>AI for OCT Imaging:</strong> Predicting atrophic progression using CNN–LSTM ensembles.</li>
+    <!-- ——— CURRENT PROJECTS ——— -->
+    <section>
+      <h2>Current Projects</h2>
+      <ul style="padding-left:1.2rem;margin:0;">
+        <li><strong>Electroretinography + Wavelets:</strong> Developing frequency-domain markers for early Stargardt phenotype stratification.</li>
+        <li><strong>AI for OCT Imaging:</strong> Predicting atrophic progression using CNN-LSTM ensembles on longitudinal scans.</li>
         <li><strong>Ontology Curation:</strong> Harmonizing inherited retinal dystrophy terms in MONDO and ClinGen.</li>
       </ul>
-      Keep this page flexible—you can expand it anytime.
-    </p>
+    </section>
+
+    <!-- ——— SELECTED PUBLICATIONS ——— -->
+    <section>
+      <h2>Selected Publications</h2>
+
+      <div class="pub-list">
+
+        <!-- Example card 1 -->
+        <article class="pub-card">
+          <div class="pub-title">
+            Discrete-wavelet markers reveal early retinal dysfunction in Stargardt disease
+          </div>
+          <div class="pub-meta">
+            <span class="tag">2024</span> Journal of Vision Science · First Author
+          </div>
+          <p>
+            Demonstrated that multi-resolution wavelet energy ratios correlate with genotypic severity
+            and outperform conventional N95/P50 amplitude metrics.
+          </p>
+          <a href="https://doi.org/10.xxx/xxxx" target="_blank">View publication</a>
+        </article>
+
+        <!-- Example card 2 -->
+        <article class="pub-card">
+          <div class="pub-title">
+            CNN–LSTM ensembles forecast atrophic spread in ABCA4-related retinopathy
+          </div>
+          <div class="pub-meta">
+            <span class="tag">2023</span> IEEE TMI · Co-Author
+          </div>
+          <p>
+            Integrated OCT en-face feature maps with temporal modeling to predict the 12-month
+            expansion of atrophic lesions with ±0.10 mm<sup>2</sup> MAE.
+          </p>
+          <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">Preprint</a>
+        </article>
+
+        <!-- Example card 3 -->
+        <article class="pub-card">
+          <div class="pub-title">
+            Mondo harmonization of inherited retinal dystrophy terminologies
+          </div>
+          <div class="pub-meta">
+            <span class="tag">2022</span> Database (Oxford) · Co-Author
+          </div>
+          <p>
+            Curated 250+ IRD terms, resolving synonym conflicts and improving ClinGen
+            gene–disease validity workflows.
+          </p>
+          <a href="https://academic.oup.com/database/article/xxxxxx" target="_blank">Open-access article</a>
+        </article>
+
+      </div>
+    </section>
+
   </main>
 </body>
 </html>
