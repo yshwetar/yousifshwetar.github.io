@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Research | Yousif Shwetar</title>
 
-  <!-- ———  GLOBAL STYLES  ——— -->
+  <!-- —— shared styles (same palette / layout as about.html) —— -->
   <style>
     /* —— layout —— */
     html,body{height:100%;margin:0;}
@@ -23,35 +23,42 @@
     /* —— navigation —— */
     nav{display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;}
     nav a{
-      color:#444;text-decoration:none;font-weight:500;
-      padding-bottom:.25rem;transition:color .2s;
+      color:#444;text-decoration:none;font-weight:500;padding-bottom:.25rem;
+      transition:color .2s;
     }
     nav a:hover{color:#2b5ea3;}
     nav a.active{color:#3a78c9;border-bottom:2px solid #3a78c9;}
 
     /* —— headings & text —— */
-    h1{font-size:2.1rem;margin:0 0 1.5rem;}
-    h2{font-size:1.25rem;margin:2.5rem 0 1rem;text-align:left;}
+    h1{font-size:2.1rem;margin:0 0 1.8rem;}
+    h2{font-size:1.3rem;margin:2.2rem 0 1rem;text-align:left;}
     p,li{font-size:1rem;line-height:1.7;text-align:justify;}
 
-    /* —— publication cards —— */
-    .pub-list{display:flex;flex-direction:column;gap:1.5rem;}
-    .pub-card{
-      text-align:left;padding:1.25rem 1.5rem;border:1px solid #e0e0e0;
+    /* —— content “cards” —— */
+    .item-list{display:flex;flex-direction:column;gap:1.25rem;}
+    .item-card{
+      text-align:left;padding:1.25rem 1.5rem;border:1px solid #e3e3e3;
       border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.03);
-      transition:transform .15s ease, box-shadow .15s ease;
+      transition:transform .15s ease,box-shadow .15s ease;
     }
-    .pub-card:hover{
+    .item-card:hover{
       transform:translateY(-3px);
       box-shadow:0 4px 8px rgba(0,0,0,.08);
     }
-    .pub-title{font-weight:600;margin:0 0 .25rem;}
-    .pub-meta{font-size:.9rem;color:#666;margin-bottom:.5rem;}
+    .item-title{font-weight:600;margin:0 0 .3rem;}
+    .item-meta{font-size:.9rem;color:#666;margin-bottom:.5rem;}
     .tag{display:inline-block;font-size:.75rem;font-weight:600;
          background:#eef2ff;color:#3a60c7;padding:.15rem .55rem;
          border-radius:4px;margin-right:.4rem;}
     a{color:#3a78c9;text-decoration:none;}
     a:hover{color:#2b5ea3;text-decoration:underline;}
+
+    /* —— collapsible toggle —— */
+    details{margin-top:1rem;text-align:left;}
+    details summary{
+      cursor:pointer;font-weight:600;user-select:none;
+      list-style:none;padding:.5rem 0;
+    }
   </style>
 </head>
 
@@ -64,67 +71,176 @@
       <a href="cv.html">CV</a>
     </nav>
 
-    <h1>Research Highlights</h1>
+    <h1>Research Portfolio</h1>
 
-    <!-- ——— CURRENT PROJECTS ——— -->
+    <!-- ———  PUBLICATIONS  ——— -->
     <section>
-      <h2>Current Projects</h2>
-      <ul style="padding-left:1.2rem;margin:0;">
-        <li><strong>Electroretinography + Wavelets:</strong> Developing frequency-domain markers for early Stargardt phenotype stratification.</li>
-        <li><strong>AI for OCT Imaging:</strong> Predicting atrophic progression using CNN-LSTM ensembles on longitudinal scans.</li>
-        <li><strong>Ontology Curation:</strong> Harmonizing inherited retinal dystrophy terms in MONDO and ClinGen.</li>
-      </ul>
+      <h2>Publications</h2>
+
+      <div class="item-list">
+
+        <article class="item-card">
+          <div class="item-title">
+            Comparative Validity of Energy Expenditure Prediction Algorithms Using Wearable Devices for People with Spinal Cord Injury
+          </div>
+          <div class="item-meta">
+            <span class="tag">2020</span> <em>Spinal Cord</em>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Predicting Physical Activity Intensity Using Raw Accelerometer Signals in Manual Wheelchair Users with Spinal Cord Injury
+          </div>
+          <div class="item-meta">
+            <span class="tag">2022</span> <em>Spinal Cord</em>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Converting Raw Accelerometer Signals into ActiGraph Counts for Wheelchair-Related Activities
+          </div>
+          <div class="item-meta">
+            <span class="tag">2020</span> RESNA Conference Proceedings
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Using Wearable Devices to Measure Physical Activity in Manual Wheelchair Users with Spinal Cord Injury
+          </div>
+          <div class="item-meta">
+            <span class="tag">2020</span> University of Pittsburgh Thesis Archive
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Listening for Biomarkers: The Emergence of Biomedical Mechano-Acoustic Emissions Systems for Longitudinal Monitoring of Body Sounds
+          </div>
+          <div class="item-meta">
+            <span class="tag">Under Review</span> <em>Devices</em>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Spectral-Statistical Analysis for Fetal R-Peak and Heart Rate Variability Calculation from Abdominal ECG
+          </div>
+          <div class="item-meta">
+            <span class="tag">Under Review</span> IEEE T-BME (CiNC Special Issue)
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Google-Scholar toggle -->
+      <details>
+        <summary>Show all publications on Google Scholar ▸</summary>
+        <p style="margin-top:.6rem;">
+          View the full, automatically updated list here:<br>
+          <a href="https://scholar.google.com/citations?user=Io2K8HoAAAAJ&hl=en" target="_blank">
+            https://scholar.google.com/citations?user=Io2K8HoAAAAJ
+          </a>
+        </p>
+      </details>
     </section>
 
-    <!-- ——— SELECTED PUBLICATIONS ——— -->
+    <!-- ———  PRESENTATIONS  ——— -->
     <section>
-      <h2>Selected Publications</h2>
+      <h2>Presentations</h2>
 
-      <div class="pub-list">
+      <div class="item-list">
 
-        <!-- Example card 1 -->
-        <article class="pub-card">
-          <div class="pub-title">
-            Discrete-wavelet markers reveal early retinal dysfunction in Stargardt disease
+        <article class="item-card">
+          <div class="item-title">
+            Assessment of Patient Hemodynamics Pre-LVAD Implant to Determine Chance of Right Ventricular Failure
           </div>
-          <div class="pub-meta">
-            <span class="tag">2024</span> Journal of Vision Science · First Author
+          <div class="item-meta">
+            <span class="tag">BMES 2017</span> Phoenix, AZ
           </div>
-          <p>
-            Demonstrated that multi-resolution wavelet energy ratios correlate with genotypic severity
-            and outperform conventional N95/P50 amplitude metrics.
-          </p>
-          <a href="https://doi.org/10.xxx/xxxx" target="_blank">View publication</a>
         </article>
 
-        <!-- Example card 2 -->
-        <article class="pub-card">
-          <div class="pub-title">
-            CNN–LSTM ensembles forecast atrophic spread in ABCA4-related retinopathy
+        <article class="item-card">
+          <div class="item-title">
+            Assessment of Patient Hemodynamics Pre-LVAD Implant to Determine Chance of Right Ventricular Failure
           </div>
-          <div class="pub-meta">
-            <span class="tag">2023</span> IEEE TMI · Co-Author
+          <div class="item-meta">
+            <span class="tag">Science 2017</span> Pittsburgh, PA
           </div>
-          <p>
-            Integrated OCT en-face feature maps with temporal modeling to predict the 12-month
-            expansion of atrophic lesions with ±0.10 mm<sup>2</sup> MAE.
-          </p>
-          <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank">Preprint</a>
         </article>
 
-        <!-- Example card 3 -->
-        <article class="pub-card">
-          <div class="pub-title">
-            Mondo harmonization of inherited retinal dystrophy terminologies
+        <article class="item-card">
+          <div class="item-title">
+            Seismocardiography-Based Markov-Chain Monte-Carlo Model to Predict NYHA Heart-Failure Class
           </div>
-          <div class="pub-meta">
-            <span class="tag">2022</span> Database (Oxford) · Co-Author
+          <div class="item-meta">
+            <span class="tag">ML Student Symposium</span> NC State University
           </div>
-          <p>
-            Curated 250+ IRD terms, resolving synonym conflicts and improving ClinGen
-            gene–disease validity workflows.
-          </p>
-          <a href="https://academic.oup.com/database/article/xxxxxx" target="_blank">Open-access article</a>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            A Neural-Network Approach to Predict Fetal Heart-Rate Variability from Fetal ECG Recordings
+          </div>
+          <div class="item-meta">
+            <span class="tag">ML Student Symposium</span> NC State University
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Mondo Disease Ontology Overview
+          </div>
+          <div class="item-meta">
+            <span class="tag">2023</span> International Conference on Collaborative Endeavors for Global Sustainability
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Harnessing Community Power for Long-Term Success of the Mondo Disease Ontology
+          </div>
+          <div class="item-meta">
+            <span class="tag">2024</span> (invited talk)
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ———  POSTERS  ——— -->
+    <section>
+      <h2>Posters</h2>
+
+      <div class="item-list">
+
+        <article class="item-card">
+          <div class="item-title">
+            Comparison of Predictive Equations for Resting Energy Expenditure Estimation in Manual Wheelchair Users with SCI
+          </div>
+          <div class="item-meta">
+            <span class="tag">VA Research Day</span> Pittsburgh, PA
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Characterizing Wheelchair Propulsion via Wearable Devices
+          </div>
+          <div class="item-meta">
+            <span class="tag">RESNA 2020</span>
+          </div>
+        </article>
+
+        <article class="item-card">
+          <div class="item-title">
+            Elevating Hand Hygiene for Safer Healthcare Environments
+          </div>
+          <div class="item-meta">
+            <span class="tag">RIoT Triangle Poster Showcase</span>
+          </div>
         </article>
 
       </div>
