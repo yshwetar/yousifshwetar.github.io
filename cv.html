@@ -4,11 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV | Yousif Shwetar</title>
-  <!-- same CSS -->
-  <style>/* (same CSS as about.html) */</style>
+
+  <!-- —— shared styles (same palette / layout as research.html) —— -->
+  <style>
+    /* —— layout —— */
+    html,body{height:100%;margin:0;}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      background:#f9f9f9;color:#111;
+      display:flex;justify-content:center;align-items:flex-start;
+    }
+    .container{
+      max-width:900px;width:100%;margin:3rem 2rem;padding:2rem 2.5rem;
+      background:#fff;border-radius:10px;
+      box-shadow:0 0 12px rgba(0,0,0,.06);text-align:center;
+    }
+
+    /* —— navigation —— */
+    nav{display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;}
+    nav a{
+      color:#444;text-decoration:none;font-weight:500;padding-bottom:.25rem;
+      transition:color .2s;
+    }
+    nav a:hover{color:#2b5ea3;}
+    nav a.active{color:#3a78c9;border-bottom:2px solid #3a78c9;}
+
+    /* —— headings & text —— */
+    h1{font-size:2.1rem;margin:0 0 1.8rem;}
+    h2{font-size:1.3rem;margin:2.2rem 0 1rem;text-align:left;}
+    p,li{font-size:1rem;line-height:1.7;text-align:justify;}
+
+    /* —— content "cards" —— */
+    .item-list{display:flex;flex-direction:column;gap:1.25rem;}
+    .item-card{
+      text-align:left;padding:1.25rem 1.5rem;border:1px solid #e3e3e3;
+      border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.03);
+      transition:transform .15s ease,box-shadow .15s ease;
+      display:flex;justify-content:space-between;align-items:center;
+      gap:1.5rem;
+    }
+    .item-card:hover{
+      transform:translateY(-3px);
+      box-shadow:0 4px 8px rgba(0,0,0,.08);
+    }
+    .item-content{flex:1;}
+    .item-title{font-weight:600;margin:0 0 .3rem;font-size:1.1rem;}
+    .item-meta{font-size:.9rem;color:#666;margin-bottom:.5rem;}
+    .item-details{font-size:.9rem;color:#444;margin-bottom:.3rem;}
+    .tag{display:inline-block;font-size:.75rem;font-weight:600;
+         background:#eef2ff;color:#3a60c7;padding:.15rem .55rem;
+         border-radius:4px;margin-right:.4rem;}
+    a{color:#3a78c9;text-decoration:none;}
+    a:hover{color:#2b5ea3;text-decoration:underline;}
+
+    /* —— school logos —— */
+    .school-logo{
+      width:60px;height:60px;object-fit:contain;
+      flex-shrink:0;
+    }
+
+    /* —— responsive —— */
+    @media (max-width: 600px) {
+      .item-card{
+        flex-direction:column;text-align:center;
+      }
+      .school-logo{
+        width:50px;height:50px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <main class="container">
+    <!-- nav bar -->
     <nav>
       <a href="about.html">About Me</a>
       <a href="research.html">Research</a>
@@ -17,22 +86,74 @@
 
     <h1>Curriculum Vitae</h1>
 
-    <p>
-      Download my full CV&nbsp;(<a href="files/Yousif_Shwetar_CV.pdf" target="_blank">PDF</a>)  
-      or browse selected sections below.
-    </p>
+    <!-- ———  EDUCATION  ——— -->
+    <section>
+      <h2>Education</h2>
 
-    <!-- Example CV outline -->
-    <h2>Education</h2>
-    <ul style="text-align:left;max-width:640px;margin:0 auto 1.5rem;">
-      <li>MD-PhD (in progress), UNC Chapel Hill</li>
-      <li>B.S. Biomedical Engineering, University of Pittsburgh</li>
-    </ul>
+      <div class="item-list">
 
-    <h2>Publications</h2>
-    <p>See <a href="https://scholar.google.com/citations?user=Io2K8HoAAAAJ&hl=en" target="_blank">Google Scholar</a> for the full list.</p>
+        <!-- University of Pittsburgh -->
+        <article class="item-card">
+          <div class="item-content">
+            <div class="item-title">
+              University of Pittsburgh
+            </div>
+            <div class="item-details">
+              Honors Bachelor's Degree in Biomedical Engineering (HBS)
+            </div>
+            <div class="item-meta"><span class="tag">2015-2020</span></div>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/University_of_Pittsburgh_seal.svg/200px-University_of_Pittsburgh_seal.svg.png" 
+               alt="University of Pittsburgh Logo" class="school-logo">
+        </article>
 
-    <!-- Add additional CV sections as needed -->
+        <!-- UNC Chapel Hill - MD -->
+        <article class="item-card">
+          <div class="item-content">
+            <div class="item-title">
+              University of North Carolina at Chapel Hill
+            </div>
+            <div class="item-details">
+              Doctor of Medicine (MD)
+            </div>
+            <div class="item-meta"><span class="tag">2021-2028</span></div>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/200px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png" 
+               alt="UNC Chapel Hill Logo" class="school-logo">
+        </article>
+
+        <!-- NC State -->
+        <article class="item-card">
+          <div class="item-content">
+            <div class="item-title">
+              North Carolina State University
+            </div>
+            <div class="item-details">
+              Master's Degree in Electrical Engineering (MS)
+            </div>
+            <div class="item-meta"><span class="tag">2023-2025</span></div>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/NC_State_Wolfpack_logo.svg/200px-NC_State_Wolfpack_logo.svg.png" 
+               alt="NC State Logo" class="school-logo">
+        </article>
+
+        <!-- UNC Chapel Hill - PhD -->
+        <article class="item-card">
+          <div class="item-content">
+            <div class="item-title">
+              University of North Carolina at Chapel Hill
+            </div>
+            <div class="item-details">
+              Doctor of Philosophy in Biomedical Engineering (PhD)
+            </div>
+            <div class="item-meta"><span class="tag">2023-2025</span></div>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/University_of_North_Carolina_at_Chapel_Hill_seal.svg/200px-University_of_North_Carolina_at_Chapel_Hill_seal.svg.png" 
+               alt="UNC Chapel Hill Logo" class="school-logo">
+        </article>
+
+      </div>
+    </section>
 
   </main>
 </body>
