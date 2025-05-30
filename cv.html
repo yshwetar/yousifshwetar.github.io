@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV | Yousif Shwetar</title>
-
   <!-- —— shared styles (same palette / layout as research.html) —— -->
   <style>
     /* —— layout —— */
@@ -19,7 +18,6 @@
       background:#fff;border-radius:10px;
       box-shadow:0 0 12px rgba(0,0,0,.06);text-align:center;
     }
-
     /* —— navigation —— */
     nav{display:flex;justify-content:center;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;}
     nav a{
@@ -28,12 +26,10 @@
     }
     nav a:hover{color:#2b5ea3;}
     nav a.active{color:#3a78c9;border-bottom:2px solid #3a78c9;}
-
     /* —— headings & text —— */
     h1{font-size:2.1rem;margin:0 0 1.8rem;}
     h2{font-size:1.3rem;margin:2.2rem 0 1rem;text-align:left;}
     p,li{font-size:1rem;line-height:1.7;text-align:justify;}
-
     /* —— content "cards" —— */
     .item-list{display:flex;flex-direction:column;gap:1.25rem;}
     .item-card{
@@ -56,13 +52,25 @@
          border-radius:4px;margin-right:.4rem;}
     a{color:#3a78c9;text-decoration:none;}
     a:hover{color:#2b5ea3;text-decoration:underline;}
-
     /* —— school logos —— */
     .school-logo{
       width:60px;height:60px;object-fit:contain;
       flex-shrink:0;
     }
-
+    /* —— awards section specific styles —— */
+    .awards-list{
+      text-align:left;padding:1.25rem 1.5rem;border:1px solid #e3e3e3;
+      border-radius:8px;box-shadow:0 2px 4px rgba(0,0,0,.03);
+    }
+    .awards-list ul{
+      margin:0;padding-left:1.5rem;
+    }
+    .awards-list li{
+      margin-bottom:0.75rem;font-size:1rem;line-height:1.6;
+    }
+    .awards-list li:last-child{
+      margin-bottom:0;
+    }
     /* —— responsive —— */
     @media (max-width: 600px) {
       .item-card{
@@ -74,7 +82,6 @@
     }
   </style>
 </head>
-
 <body>
   <main class="container">
     <!-- nav bar -->
@@ -83,15 +90,11 @@
       <a href="research.html">Research</a>
       <a href="cv.html" class="active">CV</a>
     </nav>
-
     <h1>Curriculum Vitae</h1>
-
     <!-- ———  EDUCATION  ——— -->
     <section>
       <h2>Education</h2>
-
       <div class="item-list">
-
         <!-- University of Pittsburgh -->
         <article class="item-card">
           <div class="item-content">
@@ -106,7 +109,6 @@
           <img src="./Pitt.png" 
                alt="University of Pittsburgh Logo" class="school-logo">
         </article>
-
         <!-- NC State -->
         <article class="item-card">
           <div class="item-content">
@@ -121,7 +123,6 @@
           <img src="./NCSU.png" 
                alt="NC State Logo" class="school-logo">
         </article>
-
         <!-- UNC Chapel Hill - PhD -->
         <article class="item-card">
           <div class="item-content">
@@ -136,7 +137,6 @@
           <img src="./UNC.png" 
                alt="UNC Chapel Hill Logo" class="school-logo">
         </article>
-
         <!-- UNC Chapel Hill - MD -->
         <article class="item-card">
           <div class="item-content">
@@ -151,16 +151,12 @@
           <img src="./UNC.png" 
                alt="UNC Chapel Hill Logo" class="school-logo">
         </article>
-
       </div>
     </section>
-
     <!-- ———  WORK EXPERIENCE  ——— -->
     <section>
       <h2>Work Experience</h2>
-
       <div class="item-list">
-
         <!-- HERL -->
         <article class="item-card">
           <div class="item-content">
@@ -179,7 +175,6 @@
           <img src="./HERL.png" 
                alt="HERL Logo" class="school-logo">
         </article>
-
         <!-- VMI -->
         <article class="item-card">
           <div class="item-content">
@@ -198,10 +193,31 @@
           <img src="./VMI.png" 
                alt="VMI Logo" class="school-logo">
         </article>
-
       </div>
     </section>
-
+    <!-- ———  AWARDS/FELLOWSHIP/SCHOLARSHIP  ——— -->
+    <section>
+      <h2>Awards/Fellowship/Scholarship</h2>
+      <div class="awards-list">
+        <ul>
+          <li>First Year Diversity Award (University of Pittsburgh, 2015)</li>
+          <li>Panther Pride Award (University of Pittsburgh, 2015-2020)</li>
+          <li>The Cathedral Of Learning Prestige Scholarship (University of Pittsburgh, 2015-2020)</li>
+          <li>Undergraduate BME Travel Award (University of Pittsburgh, 2017)</li>
+          <li>Honors College Travel Award (University of Pittsburgh, 2019)</li>
+          <li>Panthers Forward Scholarship (University of Pittsburgh, 2020)</li>
+          <li>First Year Enhancement Grant (University of North Carolina at Chapel Hill, 2023)</li>
+          <li>Diversity Enhancement Grant (North Carolina State University, 2024)</li>
+          <li>Mentored Teaching Experience (North Carolina State University, 2024)</li>
+          <li>Graduate EE Travel Award (North Carolina State University, 2024)</li>
+          <li>BME Graduate Student Service Award (University of North Carolina at Chapel Hill, 2025)</li>
+          <li>Graduate BME Student Travel Award (University of North Carolina at Chapel Hill, x2, 2024 & 2025)</li>
+          <li>UNC Graduate School Travel Grant (University of North Carolina at Chapel Hill, 2025)</li>
+          <li>International Society of Clinical Electrophysiology of Vision Student Scholarship (ISCEV, 2025)</li>
+          <li>Off-Campus Dissertation Scholarship (University of North Carolina at Chapel Hill, 2025)</li>
+        </ul>
+      </div>
+    </section>
   </main>
 </body>
 </html>
